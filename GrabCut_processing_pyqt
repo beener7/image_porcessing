@@ -27,7 +27,7 @@ class Orim(QMainWindow):
         
         fileButton.clicked.connect(self.fileOpenFunction)
         paintButton.clicked.connect(self.paintFunction)
-        cutButton.clicked.connect(self,cutFunction)
+        cutButton.clicked.connect(self.cutFunction)
         incButton.clicked.connect(self.incFunction)
         decButton.clicked.connect(self.decFunction)
         saveButton.clicked.connect(self.saveFunction)
@@ -68,7 +68,6 @@ class Orim(QMainWindow):
         
         cv.imshow('Painting',self.img_show)
             
-        
     def cutFunction(self):
         background = np.zeros((1,65),np.float64)
         foreground= np.zero((1,65),np.float64)
